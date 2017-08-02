@@ -1,0 +1,16 @@
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\SATC.Framework.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\SATC.Framework.pdb
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Newtonsoft.Json.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.Analytics.Core.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.Analytics.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.Analytics.Model.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.Analytics.Outcome.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.ContentSearch.Analytics.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.ContentSearch.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.ContentSearch.Linq.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.Kernel.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.Mvc.Analytics.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Sitecore.Mvc.dll
+D:\Sitecore\events.tac.local\SATC.Framework\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Sitecore\events.tac.local\SATC.Framework\obj\Debug\SATC.Framework.dll
+D:\Sitecore\events.tac.local\SATC.Framework\obj\Debug\SATC.Framework.pdb
