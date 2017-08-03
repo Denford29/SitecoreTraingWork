@@ -160,7 +160,6 @@ C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Microsoft.CodeDom.Providers.
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Microsoft.Web.Infrastructure.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Newtonsoft.Json.dll
-C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\SATC.Framework.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Sitecore.Analytics.Core.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Sitecore.Analytics.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Sitecore.Analytics.Model.dll
@@ -180,7 +179,6 @@ C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\System.Web.WebPages.Razor.dl
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\TAC.Utils.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Microsoft.Owin.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Owin.dll
-C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\SATC.Framework.pdb
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\TAC.Utils.pdb
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Microsoft.AI.DependencyCollector.xml
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -199,3 +197,5 @@ C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\Microsoft.Owin.xml
 C:\Sitecore\SitecoreTraingWork\events.tac.local\obj\Debug\events.tac.local.csprojResolveAssemblyReference.cache
 C:\Sitecore\SitecoreTraingWork\events.tac.local\obj\Debug\events.tac.local.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\obj\Debug\events.tac.local.pdb
+C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\SATC.SC.Framework.dll
+C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\SATC.SC.Framework.pdb
