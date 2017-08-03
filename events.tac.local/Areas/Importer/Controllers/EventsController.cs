@@ -1,6 +1,6 @@
 ﻿using events.tac.local.Areas.Importer.Models;
 using Newtonsoft.Json;
-using SATC.Framework.SitecoreHelpers;
+using SATC.SC.Framework.SitecoreHelpers;
 using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Items;

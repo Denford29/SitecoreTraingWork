@@ -214,7 +214,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Project\TAC\Events.Serialization.config" />
-    <None Include="App_Config\Include\Project\TAC\Events.KeyItemIDs.config" />
+    <None Include="App_Config\Include\Project\TAC\Events.KeyItemIDs.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="App_Config\Include\Project\TAC\Lucene.Events.Master.Index.config" />
     <None Include="App_Config\Include\Project\TAC\Lucene.Events.Web.Index.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -320,6 +322,7 @@
     <Content Include="Views\CommentsForm\Index.cshtml" />
     <Content Include="Views\CommentsForm\Confirmation.cshtml" />
     <Content Include="Views\EventsList\Index.cshtml" />
+    <Content Include="Views\PageHeader\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -346,31 +349,35 @@
     <Compile Include="Controllers\FeaturedEventController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Controllers\OverviewController.cs" />
+    <Compile Include="Controllers\PageHeaderController.cs" />
     <Compile Include="Controllers\RelatedEventsController.cs" />
     <Compile Include="Controllers\SubscribeFormController.cs" />
     <Compile Include="Models\EventDetails.cs" />
     <Compile Include="Models\EventIntro.cs" />
     <Compile Include="Models\EventsList.cs" />
     <Compile Include="Models\FeaturedEvent.cs" />
+    <Compile Include="Models\MenuItemModel.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\NavigationMenu.cs" />
     <Compile Include="Models\OverviewItem.cs" />
     <Compile Include="Models\OverviewList.cs" />
+    <Compile Include="Models\PageHeaderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SATC.Framework\SATC.Framework.csproj">
+    <ProjectReference Include="..\SATC.SC.Framework\SATC.SC.Framework.csproj">
       <Project>{23d0a6db-5374-40da-874f-b2346f1056e6}</Project>
-      <Name>SATC.Framework</Name>
+      <Name>SATC.SC.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\tac.utils\tac.utils.csproj">
       <Project>{1c59f3aa-127d-4d46-92a9-8eb82692b76a}</Project>
       <Name>tac.utils</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
