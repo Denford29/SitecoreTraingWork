@@ -1,4 +1,5 @@
-﻿@model events.tac.local.Models.NavigationMenu
+﻿@using SATC.SC.Framework.Navigation.Models;
+@model NavigationMenuModel
 
 <!-- [Page Navigation] -->
 <h4>
@@ -12,8 +13,8 @@
 </div>
 <!-- [/Page Navigation] -->
 
-@helper RenderNavigation(IEnumerable<events.tac.local.Models.NavigationMenu> items)
-    {
+@helper RenderNavigation(IEnumerable<NavigationMenuModel> items)
+{
 
     <ul class="nav nav-pills nav-stacked">
         @foreach (var item in items)

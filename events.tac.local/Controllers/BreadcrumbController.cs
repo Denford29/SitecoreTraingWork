@@ -1,54 +1,76 @@
-﻿using events.tac.local.Models;
-using Sitecore.Data.Items;
+﻿using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Mvc.Presentation;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using SATC.SC.Framework.Navigation;
+using SATC.SC.Framework.Navigation.Models;
+using SATC.SC.Framework.SitecoreHelpers;
+using Sitecore.Data;
 
 namespace events.tac.local.Controllers
 {
     public class BreadcrumbController : Controller
     {
-        // GET: Breadcrumb
-        public ActionResult Index()
+
+        /// <summary>
+        /// initiate the field for the navigation helpers from the SATC SC Framework
+        /// </summary>
+        private readonly NavigationHelpers _navigationHelpers;
+
+        /// <summary>
+        /// inittiate the field for the standard helper from the SATC SC Framework
+        /// </summary>
+        private readonly StandardHelpers _standardHelper;
+
+        /// <summary>
+        /// create the constructor and assign any fields
+        /// </summary>
+        /// <param name="navigationHelpers"></param>
+        /// <param name="standardHelper"></param>
+        public BreadcrumbController
+        (
+            NavigationHelpers navigationHelpers,
+            StandardHelpers standardHelper
+        )
         {
-            return View(CreateModel());
+            _navigationHelpers = navigationHelpers;
+            _standardHelper = standardHelper;
         }
 
-        public IEnumerable<NavigationItem> CreateModel()
+        /// <summary>
+        /// get the initial display with the model to use in the view
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Index()
         {
-            // create the default navigation list to populate later
-            IEnumerable<NavigationItem> navigationList = new List<NavigationItem>();
+
+            // create the inital list of items
+            var breadcrumbList = new List<NavigationItemModel>();
             // get the current item
             var currentItem = RenderingContext.Current.ContextItem;
 
-            // get the home item from the database using the sitecore context site start path
-            var homeItem = Sitecore.Context.Database.GetItem(Sitecore.Context.Site.StartPath);
+            //get the master database to use to get items from
+            var database = currentItem.Database;
 
-            if(homeItem != null && currentItem != null)
+            // get the homepage id set in the config to use to get the breadcrumb items with
+            var homePageId = _standardHelper.GetItemIdFromConfig("HomePageID");
+            if (homePageId != ID.Null)
             {
-                //get the parent items up to home
-                var breadcrumbItems = RenderingContext.Current.ContextItem.Axes.GetAncestors().
-                                                         Where(item => item.Axes.IsDescendantOf(homeItem)).
-                                                         Concat(new Item[] { currentItem }).
-                                                         ToList();
-
-                if(breadcrumbItems.Any())
+                //get the home item from the config id
+                var homePage = database.GetItem(homePageId);
+                //check if the home item in not null
+                if (homePage != null)
                 {
-                    navigationList = breadcrumbItems.Select(
-                        item => new NavigationItem
-                        {
-                            Title = item.DisplayName,
-                            Url = LinkManager.GetItemUrl(item),
-                            Active = (item.ID == currentItem.ID)
-                        });
+                    //get the breadcrumb list from our framework helper
+                    breadcrumbList = _navigationHelpers.CreateBreadcrumbMenu(currentItem, homePage);
                 }
             }
 
-            return navigationList;
-        } 
+            //retunr the list
+            return View(breadcrumbList);
+        }
+
     }
 }

@@ -1,56 +1,101 @@
 ﻿@model events.tac.local.Models.PageHeaderModel
 
-<header class="header-static">
-    <nav class="navbar navbar-default navbar-static" id="mainNavbar">
-        <div class="container">
-            <!-- [Company Logo] -->
-            <div class="navbar-left">
-                <a class="navbar-brand" href="index.html">
-                    <span class="logo">
-                        <img src="/Images/Logo_400x60.png" alt="The Adventure Company" width="400" height="60" />
-                    </span>
-                </a>
-            </div>
-            <!-- [/Company Logo] -->
-            <!-- [Main Navigation] -->
-            <div class="navbar-left">
-                <div class="collapse navbar-collapse" id="siteNavbar">
-                    <ul class="nav navbar-nav">
-                        <li><a class="text-uppercase" href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="Event-Sections.html" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true"
-                               aria-expanded="false">
-                                Events<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="Event-List.html">Climbing</a></li>
-                                <li><a href="Event-List.html">Cycling</a></li>
-                                <li><a href="Event-List.html">Hiking</a></li>
-                                <li><a href="Event-List.html">Skiing</a></li>
+@if (Model.HomePageUrl != null)
+{
+
+    <header class="header-static">
+        <nav class="navbar navbar-default navbar-static" id="mainNavbar">
+            <div class="container">
+                @if (!string.IsNullOrWhiteSpace(Model.LogoImage.ToHtmlString()))
+                {
+                    <!-- [Company Logo] -->
+                    <div class="navbar-left">
+                        <a class="navbar-brand" href="@Model.HomePageUrl">
+                            <span class="logo">
+                                @Model.LogoImage
+                            </span>
+                        </a>
+                    </div>
+                    <!-- [/Company Logo] -->
+                }
+
+
+                @if (Model.MenuItems.Count > 0)
+                {
+                    <!-- [Main Navigation] -->
+                    <div class="navbar-left">
+                        <div class="collapse navbar-collapse" id="siteNavbar">
+                            <ul class="nav navbar-nav">
+                                @foreach (var menuItem in Model.MenuItems)
+                                {
+                                    if (menuItem.Children.Count == 0)
+                                    {
+                                        <li>
+                                            <a class="text-uppercase" href="@menuItem.Url">
+                                                @menuItem.Title
+                                            </a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="dropdown">
+                                            <a href="@menuItem.Url" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                               aria-expanded="false">
+                                                @menuItem.Title
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach (var childItem in menuItem.Children)
+                                                {
+                                                    <li>
+                                                        <a href="@childItem.Url">
+                                                            @childItem.Title
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    }
+                                }
+
                             </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- [/Main Navigation] -->
-            <!-- [Language Navigation] -->
-            <div class="navbar-right">
-                <div class="navbar-activity">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-globe"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="active"><a href="#">English</a></li>
-                                <li><a href="#">Deutsch (Deutschland)</a></li>
-                                <li><a href="#">日本語 (日本)</a></li>
+                        </div>
+                    </div>
+                    <!-- [/Main Navigation] -->
+                }
+                
+                @if (Model.Languages.Count > 0 && !string.IsNullOrWhiteSpace(Model.CurrentLanguage.TwoLetterCode))
+                {
+                    <!-- [Language Navigation] -->
+                    <div class="navbar-right">
+                        <div class="navbar-activity">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-globe"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        @foreach (var language in Model.Languages)
+                                        {
+                                            var cssClass = language.TwoLetterCode == Model.CurrentLanguage.TwoLetterCode ? "active" : "";
+                                            <li class="@cssClass">
+                                                <a href="@language.Url" onclick="return switchToLanguage('@language.Name', '@(Model.CurrentLanguage.Name)', '@language.Url')">
+                                                    @language.NativeName
+                                                </a>
+                                            </li>
+                                        }
+                                        @*<li class="active"><a href="#">English</a></li>
+                                        <li><a href="#">Deutsch (Deutschland)</a></li>
+                                        <li><a href="#">日本語 (日本)</a></li>*@
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </div>
+                    <!-- [/Language Navigation] -->
+                }
+                
             </div>
-            <!-- [/Language Navigation] -->
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
+}

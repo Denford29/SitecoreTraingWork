@@ -217,6 +217,7 @@
     <None Include="App_Config\Include\Project\TAC\Events.KeyItemIDs.config">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="App_Config\Include\Project\TAC\EventsSiteDefinition.config" />
     <None Include="App_Config\Include\Project\TAC\Lucene.Events.Master.Index.config" />
     <None Include="App_Config\Include\Project\TAC\Lucene.Events.Web.Index.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -226,12 +227,13 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.2.1.4.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\Navigation.js" />
+    <Content Include="Scripts\SiteScripts.js" />
     <Content Include="Scripts\Sitecore.Foundation.Theming.min.js" />
     <Content Include="Views\Main.cshtml" />
     <Content Include="Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
@@ -301,7 +303,6 @@
     <Content Include="fonts\open-sans-v13-latin-regular.woff" />
     <Content Include="fonts\open-sans-v13-latin-regular.woff2" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <Content Include="Views\TAC\Events\Layouts\Home.cshtml" />
     <Content Include="Views\TAC\Events\Layouts\Events.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -323,6 +324,7 @@
     <Content Include="Views\CommentsForm\Confirmation.cshtml" />
     <Content Include="Views\EventsList\Index.cshtml" />
     <Content Include="Views\PageHeader\Index.cshtml" />
+    <Content Include="Views\Carousel\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -340,9 +342,10 @@
     <Compile Include="Areas\Importer\ImporterAreaRegistration.cs" />
     <Compile Include="Areas\Importer\Models\Event.cs" />
     <Compile Include="Areas\Importer\Models\EventsImporterModel.cs" />
-    <Compile Include="Business\Navigation\NavigationModelBuilder.cs" />
     <Compile Include="Business\ServicesConfigurator.cs" />
+    <Compile Include="Business\SiteConstants.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
+    <Compile Include="Controllers\CarouselController.cs" />
     <Compile Include="Controllers\CommentsFormController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
     <Compile Include="Controllers\EventsListController.cs" />
@@ -352,16 +355,16 @@
     <Compile Include="Controllers\PageHeaderController.cs" />
     <Compile Include="Controllers\RelatedEventsController.cs" />
     <Compile Include="Controllers\SubscribeFormController.cs" />
+    <Compile Include="Models\CarouselImageModel.cs" />
     <Compile Include="Models\EventDetails.cs" />
     <Compile Include="Models\EventIntro.cs" />
     <Compile Include="Models\EventsList.cs" />
     <Compile Include="Models\FeaturedEvent.cs" />
     <Compile Include="Models\MenuItemModel.cs" />
-    <Compile Include="Models\NavigationItem.cs" />
-    <Compile Include="Models\NavigationMenu.cs" />
     <Compile Include="Models\OverviewItem.cs" />
     <Compile Include="Models\OverviewList.cs" />
     <Compile Include="Models\PageHeaderModel.cs" />
+    <Compile Include="Models\SiteCarouselModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

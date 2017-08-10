@@ -1,5 +1,6 @@
 ﻿@using Sitecore.Mvc.Extensions
-@model IEnumerable<events.tac.local.Models.NavigationItem>
+@using Sitecore.Mvc.Presentation
+@model IEnumerable<SATC.SC.Framework.Navigation.Models.NavigationItemModel>
 
 <!-- [Related Events] -->
 @using (Html.EditFrame(RenderingContext.Current.ContextItem.Paths.FullPath, "Related Events", null, null, null, null))

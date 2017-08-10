@@ -3,7 +3,7 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-  Layout = null;
+    Layout = null;
 }
 <!DOCTYPE html>
 <!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
@@ -34,13 +34,11 @@
 <body class="header-static ">
     <div id="main-container">
         <!-- [Page Header] -->
-        @Html.Sitecore().Rendering("/sitecore/layout/Renderings/TAC/Events/Page Header")
+        @Html.Sitecore().Rendering("/sitecore/layout/Renderings/TAC/Events/PageHeader")
         <!-- [/Page Header] -->
-
         <!-- [Page Content] -->
         @Html.Sitecore().Placeholder("main")
         <!-- [/Page Content] -->
-
         <!-- [Footer Content] -->
         <footer>
             <div class="container">
@@ -90,8 +88,12 @@
         </footer>
         <!-- [/Footer Content] -->
     </div>
-    <script src="/Scripts/Sitecore.Foundation.Theming.min.js"></script>
-    <script src="/Scripts/Navigation.js"></script>
+
+    <!-- jQuery -->
+    <script src="/Scripts/jquery.2.1.4.js"></script>
+    <!-- Include all other scripts -->
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/SiteScripts.js"></script>
 </body>
 
 </html>

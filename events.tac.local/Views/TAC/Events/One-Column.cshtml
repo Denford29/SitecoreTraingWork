@@ -6,5 +6,12 @@
 }
 
 <main>
+    
+    <header class="page-header">
+        <!-- [Homepage Carousell] -->
+        @Html.Sitecore().Placeholder("carouselImages")
+        <!-- [/Homepage Carousell] -->
+    </header>
+
     @Html.Sitecore().Placeholder("pageContent")
 </main>

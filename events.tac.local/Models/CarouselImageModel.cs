@@ -5,24 +5,32 @@ using System.Web;
 
 namespace events.tac.local.Models
 {
-    public class NavigationItem
+    public class CarouselImageModel
     {
-        public string Title
+
+        public string CarouselImage
         {
             get;
             set;
         }
 
-        public string Url
+        public string CarouselHeading
         {
             get;
             set;
         }
 
-        public bool Active
+        public string CarouselIntro
         {
             get;
             set;
         }
+
+        public string CarouselLink
+        {
+            get;
+            set;
+        }
+
     }
 }

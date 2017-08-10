@@ -6,17 +6,30 @@
 @{
     var backgroundImage = "/Images/climbing-events.jpg";
     var currentItem = RenderingContext.Current.ContextItem;
-    //var Image = FieldRenderer.Render(currentItem, "DecorationBanner", "mw=1280&mh=853");
-    MediaItem mediaItem = currentItem.Fields["DecorationBanner"].Item;
-    var imageSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem);
-    if(imageSrc != null)
+    if (currentItem.Fields["DecorationBanner"] != null)
     {
-        backgroundImage = imageSrc;
+        MediaItem bannerMediaItem = currentItem.Fields["DecorationBanner"].Item;
+        var bannerField = currentItem.Fields["DecorationBanner"].ToString();
+        if (!string.IsNullOrWhiteSpace(bannerField))
+        {
+            var database = Sitecore.Context.Database;
+            var bannerItem = database.GetItem(bannerField);
+            if (bannerItem != null)
+            {
+                MediaItem mediaItem = bannerItem;
+                var imageSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem);
+                if (imageSrc != null)
+                {
+                    backgroundImage = imageSrc;
+                }
+            }
+        }
     }
+
 }
 
 <main>
-    <header class="page-header bg-media bg-parallax" style="background-image: url('/Images/climbing-events.jpg')">
+    <header class="page-header bg-media bg-parallax" style="background-image: url(@backgroundImage)">
         <div class="container">
             <!-- [Breadcrumb Navigation] -->
             @Html.Sitecore().Placeholder("pageHeader")
