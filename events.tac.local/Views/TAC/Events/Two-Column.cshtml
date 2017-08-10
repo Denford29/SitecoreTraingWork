@@ -1,31 +1,17 @@
-﻿@using Sitecore.Mvc
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
-@using Sitecore.Web.UI.WebControls
-@using Sitecore.Data.Items;
+@using Sitecore.Resources.Media
 @model RenderingModel
 @{
     var backgroundImage = "/Images/climbing-events.jpg";
     var currentItem = RenderingContext.Current.ContextItem;
-    if (currentItem.Fields["DecorationBanner"] != null)
+    ImageField bannerImageField = currentItem.Fields["DecorationBanner"];
+    if (bannerImageField != null && bannerImageField.MediaItem != null)
     {
-        MediaItem bannerMediaItem = currentItem.Fields["DecorationBanner"].Item;
-        var bannerField = currentItem.Fields["DecorationBanner"].ToString();
-        if (!string.IsNullOrWhiteSpace(bannerField))
-        {
-            var database = Sitecore.Context.Database;
-            var bannerItem = database.GetItem(bannerField);
-            if (bannerItem != null)
-            {
-                MediaItem mediaItem = bannerItem;
-                var imageSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem);
-                if (imageSrc != null)
-                {
-                    backgroundImage = imageSrc;
-                }
-            }
-        }
+        var options = new MediaUrlOptions { Height =850 , Width = 565 };
+        backgroundImage = MediaManager.GetMediaUrl(bannerImageField.MediaItem, options);
     }
-
 }
 
 <main>
@@ -34,9 +20,9 @@
             <!-- [Breadcrumb Navigation] -->
             @Html.Sitecore().Placeholder("pageHeader")
             <!-- [/Breadcrumb Navigation] -->
-
         </div>
     </header>
+
     <section class="page-header">
         <div class="container">
             <!-- [Two Columns] -->

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using events.tac.local.Models;
 using SATC.SC.Framework.SitecoreHelpers;
@@ -9,8 +6,7 @@ using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Links;
-using Sitecore.Mvc.Presentation;
-using Sitecore.Web.UI.WebControls;
+using Sitecore.Resources.Media;
 
 namespace events.tac.local.Controllers
 {
@@ -57,8 +53,6 @@ namespace events.tac.local.Controllers
                     var isSiteSettingsTemplate = siteSettingsPage.TemplateID == siteSettingsTemplateId;
                     if (isSiteSettingsTemplate)
                     {
-                        //model.LogoImage = new HtmlString(FieldRenderer.Render(siteSettingsPage, "Project_Logo", "mw=400"));
-
                         //get the tree list of carousel images
                         MultilistField carouselImagesList = siteSettingsPage.Fields["Carousel"];
 
@@ -71,20 +65,23 @@ namespace events.tac.local.Controllers
                             {
                                 foreach (var image in carouselImages)
                                 {
-                                    MediaItem carouselMedia = image;
                                     var carouselImageModel = new CarouselImageModel()
                                     {
-                                        CarouselImage = Sitecore.Resources.Media.MediaManager.GetMediaUrl(carouselMedia),
                                         CarouselHeading = image.Fields["Title"].ToString(),
-                                        CarouselIntro = image.Fields["Description"].ToString(),
-                                        CarouselLink = image.Fields["ContentLink"].ToString()
+                                        CarouselIntro = image.Fields["Description"].ToString()
                                     };
+                                    //get the carousel image
+                                    MediaItem carouselMedia = image;
+                                    if (carouselMedia != null)
+                                    {
+                                        var options = new MediaUrlOptions { Height = 1920, Width = 660 };
+                                        carouselImageModel.CarouselImage = MediaManager.GetMediaUrl(carouselMedia, options);
+                                    }
 
                                     //get the content link
                                     var contentLinkField = image.Fields["ContentLink"].ToString();
                                     if (!string.IsNullOrWhiteSpace(contentLinkField))
                                     {
-                                        //var contentLinkId = new ID(contentLinkField);
                                         var contentLink = database.GetItem(contentLinkField);
                                         if (contentLink != null)
                                         {
