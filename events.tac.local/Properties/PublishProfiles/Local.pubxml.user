@@ -10,16 +10,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="App_Config/Events.DefaultIndexConfiguration.config">
       <publishTime>07/28/2017 10:50:12</publishTime>
     </File>
     <File Include="App_Config/Include/Project/TAC/Events.DefaultIndexConfiguration.config">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="App_Config/Include/Project/TAC/Events.DependencyInjection.config">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="App_Config/Include/Project/TAC/Events.KeyContentItemIDs.config">
       <publishTime>08/02/2017 11:02:43</publishTime>
@@ -28,10 +28,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/02/2017 12:02:28</publishTime>
     </File>
     <File Include="App_Config/Include/Project/TAC/Events.Serialization.config">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="App_Config/Include/Project/TAC/Events.Services.Client.config">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="App_Config/Include/Project/TAC/EventsSiteDefinition.config">
       <publishTime>08/10/2017 13:13:00</publishTime>
@@ -43,22 +43,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/28/2017 10:39:22</publishTime>
     </File>
     <File Include="Areas/Importer/Views/Events/Index.cshtml">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Areas/Importer/Views/Shared/Layout.cshtml">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Areas/Importer/Views/Shared/_Layout.cshtml">
       <publishTime>07/27/2017 13:50:07</publishTime>
     </File>
     <File Include="Areas/Importer/Views/web.config">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Areas/Importer/Views/_ViewStart.cshtml">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="bin/App_Config/Events.DefaultIndexConfiguration.config">
       <publishTime>07/28/2017 10:50:12</publishTime>
@@ -91,88 +91,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/28/2017 10:52:05</publishTime>
     </File>
     <File Include="bin/events.tac.local.dll">
-      <publishTime>08/10/2017 13:35:51</publishTime>
+      <publishTime>08/14/2017 08:03:01</publishTime>
     </File>
     <File Include="bin/events.tac.local.pdb">
-      <publishTime>08/10/2017 13:35:51</publishTime>
+      <publishTime>08/14/2017 08:03:01</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
-      <publishTime>03/08/2017 09:57:23</publishTime>
+      <publishTime>08/03/2017 09:57:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>03/08/2017 09:57:23</publishTime>
+      <publishTime>08/03/2017 09:57:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>03/08/2017 09:57:23</publishTime>
+      <publishTime>08/03/2017 09:57:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>03/08/2017 09:57:23</publishTime>
+      <publishTime>08/03/2017 09:57:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>03/08/2017 09:57:23</publishTime>
+      <publishTime>08/03/2017 09:57:23</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.TraceListener.dll">
-      <publishTime>03/08/2017 09:57:23</publishTime>
+      <publishTime>08/03/2017 09:57:23</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>03/08/2017 09:57:26</publishTime>
+      <publishTime>08/03/2017 09:57:26</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>03/08/2017 09:57:26</publishTime>
+      <publishTime>08/03/2017 09:57:26</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>03/08/2017 09:57:26</publishTime>
+      <publishTime>08/03/2017 09:57:26</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>03/08/2017 09:57:25</publishTime>
+      <publishTime>08/03/2017 09:57:25</publishTime>
     </File>
     <File Include="bin/SATC.Framework.dll">
       <publishTime>08/02/2017 15:26:36</publishTime>
@@ -181,427 +181,427 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/02/2017 15:26:36</publishTime>
     </File>
     <File Include="bin/SATC.SC.Framework.dll">
-      <publishTime>08/10/2017 13:35:48</publishTime>
+      <publishTime>08/14/2017 08:02:57</publishTime>
     </File>
     <File Include="bin/SATC.SC.Framework.pdb">
-      <publishTime>08/10/2017 13:35:48</publishTime>
+      <publishTime>08/14/2017 08:02:57</publishTime>
     </File>
     <File Include="bin/Sitecore.Analytics.Core.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Sitecore.Analytics.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Sitecore.Analytics.Model.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Sitecore.Analytics.Outcome.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Sitecore.ContentSearch.Analytics.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Sitecore.ContentSearch.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Sitecore.ContentSearch.Linq.dll">
-      <publishTime>03/08/2017 09:57:16</publishTime>
+      <publishTime>08/03/2017 09:57:16</publishTime>
     </File>
     <File Include="bin/Sitecore.Kernel.dll">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="bin/Sitecore.Mvc.Analytics.dll">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="bin/Sitecore.Mvc.dll">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>01/28/2015 04:02:42</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
       <publishTime>01/28/2015 04:02:54</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>03/08/2017 09:57:24</publishTime>
+      <publishTime>08/03/2017 09:57:24</publishTime>
     </File>
     <File Include="bin/TAC.Utils.dll">
-      <publishTime>08/10/2017 13:35:48</publishTime>
+      <publishTime>08/14/2017 08:02:57</publishTime>
     </File>
     <File Include="bin/TAC.Utils.pdb">
-      <publishTime>08/10/2017 13:35:48</publishTime>
+      <publishTime>08/14/2017 08:02:57</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/addition.css">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/font-awesome/fonts/fontawesome-webfont.eot">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/font-awesome/fonts/fontawesome-webfont.svg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/font-awesome/fonts/fontawesome-webfont.ttf">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/font-awesome/fonts/fontawesome-webfont.woff">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/font-awesome/fonts/fontawesome-webfont.woff2">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/bower_components/font-awesome/fonts/FontAwesome.otf">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/Difficulty.css">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/font-awesome.min.css">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Css/niteflight.min.css">
       <publishTime>08/10/2017 13:41:38</publishTime>
     </File>
     <File Include="Css/vendor.min.css">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-700.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-700.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-700.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-700.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-700.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-italic.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-italic.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-italic.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-italic.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-italic.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-regular.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-regular.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-regular.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-regular.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/bitter-v7-latin-regular.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/FontAwesome.otf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300italic.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300italic.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300italic.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300italic.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-300italic.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600italic.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600italic.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600italic.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600italic.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-600italic.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700italic.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700italic.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700italic.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700italic.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-700italic.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-800.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-800.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-800.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-800.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-800.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-italic.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-italic.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-italic.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-italic.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-italic.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-regular.eot">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-regular.svg">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-regular.ttf">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-regular.woff">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="fonts/open-sans-v13-latin-regular.woff2">
-      <publishTime>03/08/2017 09:57:20</publishTime>
+      <publishTime>08/03/2017 09:57:20</publishTime>
     </File>
     <File Include="Images/carousel-climbing.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/carousel-cycling.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/carousel-hiking.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/carousel-skiing.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/climbing-events.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/Climbing-the-Face-of-Half-Dome.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/cycling-events.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/Cycling-from-Bangkok-to-Chiang-Mai.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/hiking-events.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/Hiking-the-Italian-Alps.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/Logo_400x60.png">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/Rock-Climbing-in-the-Czech-Republic.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/skiing-events.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Images/Skiing-the-Himalayas.jpg">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>03/08/2017 09:57:23</publishTime>
+      <publishTime>08/03/2017 09:57:23</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/CommentsForm.js">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/jquery.2.1.4.js">
       <publishTime>07/11/2017 14:51:50</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Scripts/Navigation.js">
       <publishTime>03/08/2017 09:57:17</publishTime>
     </File>
     <File Include="Scripts/Sitecore.Foundation.Theming.min.js">
-      <publishTime>03/08/2017 09:57:17</publishTime>
+      <publishTime>08/03/2017 09:57:17</publishTime>
     </File>
     <File Include="Scripts/SiteScripts.js">
       <publishTime>08/09/2017 18:00:30</publishTime>
@@ -613,28 +613,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/10/2017 13:20:35</publishTime>
     </File>
     <File Include="Views/CommentsForm/Confirmation.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/CommentsForm/Index.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/EventIntro/Index.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/EventsList/Index.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/FeaturedEvent/Index.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/Main.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/Navigation/Index.cshtml">
       <publishTime>08/09/2017 10:57:01</publishTime>
     </File>
     <File Include="Views/Overview/Index.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/10/2017 13:43:25</publishTime>
     </File>
     <File Include="Views/PageHeader/Index.cshtml">
       <publishTime>08/09/2017 16:30:10</publishTime>
@@ -643,16 +643,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/09/2017 18:01:38</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/SubscribeForm/Confirmation.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/SubscribeForm/Index.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/11/2017 11:08:22</publishTime>
     </File>
     <File Include="Views/TAC/Events/HomeContent.cshtml">
-      <publishTime>08/10/2017 10:48:21</publishTime>
+      <publishTime>08/10/2017 13:44:16</publishTime>
     </File>
     <File Include="Views/TAC/Events/Layouts/Events.cshtml">
       <publishTime>08/10/2017 07:52:26</publishTime>
@@ -664,19 +664,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/10/2017 10:48:13</publishTime>
     </File>
     <File Include="Views/TAC/Events/PageContent.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/TAC/Events/SideContent.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Views/TAC/Events/Two-Column.cshtml">
       <publishTime>08/10/2017 13:22:39</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>03/08/2017 09:57:18</publishTime>
+      <publishTime>08/03/2017 09:57:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/10/2017 13:36:38</publishTime>
+      <publishTime>08/14/2017 08:03:59</publishTime>
     </File>
   </ItemGroup>
 </Project>

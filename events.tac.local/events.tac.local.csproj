@@ -325,6 +325,7 @@
     <Content Include="Views\EventsList\Index.cshtml" />
     <Content Include="Views\PageHeader\Index.cshtml" />
     <Content Include="Views\Carousel\Index.cshtml" />
+    <Content Include="Views\PageFooter\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -352,6 +353,7 @@
     <Compile Include="Controllers\FeaturedEventController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Controllers\OverviewController.cs" />
+    <Compile Include="Controllers\PageFooterController.cs" />
     <Compile Include="Controllers\PageHeaderController.cs" />
     <Compile Include="Controllers\RelatedEventsController.cs" />
     <Compile Include="Controllers\SubscribeFormController.cs" />
@@ -363,6 +365,7 @@
     <Compile Include="Models\MenuItemModel.cs" />
     <Compile Include="Models\OverviewItem.cs" />
     <Compile Include="Models\OverviewList.cs" />
+    <Compile Include="Models\PageFooterModel.cs" />
     <Compile Include="Models\PageHeaderModel.cs" />
     <Compile Include="Models\SiteCarouselModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
