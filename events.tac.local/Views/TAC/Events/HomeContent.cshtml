@@ -1,78 +1,68 @@
-﻿@using Sitecore.Mvc
+﻿@using System.Web.Mvc.Html
+@using Sitecore.Links
+@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-
+    var currentPage = RenderingContext.Current.ContextItem;
+    var database = currentPage.Database;
+    var featuredEvent = currentPage.Fields["Featured-Event"];
+    //if (featuredEvent != null)
+    //{
+    //    var featuredEventPage = database.GetItem(featuredEvent.ToString());
+    //}
 }
 
-    <section class="section section-full">
-        <!-- [Featured Events] -->
-        <div class="container">
-            <div class="row">
-                @Html.Sitecore().Placeholder("featuredEvents")
-            </div>
+<section class="section section-full">
+    <!-- [Featured Events] -->
+    <div class="container">
+        <div class="row">
+            @Html.Sitecore().Placeholder("featuredEvents")
         </div>
-        <!-- [/Featured Events] -->
+    </div>
+    <!-- [/Featured Events] -->
 
-        <!-- [Upcoming Events] -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="thumbnail">
-                        <a href="Event-Detail.html">
-                            <img src="/Images/Skiing-the-Himalayas.jpg" class="img-responsive" alt="Skiing in the Himalayas" width="500" height="333" />
-                        </a>
-                        <div class="caption">
-                            <h3 class="teaser-heading">Skiing the Himalayas</h3>
-                            <p>
-                                The Himalayan Mountains offer the highest altitude skiing and snowboarding in the world. Here, you are surrounded by the largest and steepest mountains on earth and the views are unparalleled. Because the mountains are so high, the runs are long. The geographical location and the heavy snowfall make Gulmarg’s ski runs the best in the Himalayas, if not the world. <br>
-                                Our journey to Gulmarg from Srinagar is perhaps the most enchanting part of the trip. You will see picturesque villages, spectacular mountain views, and forested slopes on this tour through the unique landscape of the Himalayas.
-                            </p>
-                            <a href="Event-Detail.html" class="btn btn-default">Read more</a>
+    <div class="container">
+        <div class="row">
+            <!-- [Set Featured Event] -->
+            @if (featuredEvent != null)
+            {
+                var featuredEventPage = database.GetItem(featuredEvent.ToString());
+                if (featuredEventPage != null)
+                {
+                    var pageLink = LinkManager.GetItemUrl(featuredEventPage);
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            @if (!string.IsNullOrWhiteSpace(featuredEventPage.Fields["Event-Image"].ToString()))
+                            {
+                                <a href="@pageLink">
+                                    @Html.Sitecore().Field("Event-Image", featuredEventPage, new { mw = 500, mh = 330, @class = "img-responsive" })
+                                </a>
+                            }
+                            <div class="caption">
+                                <h3>
+                                    @featuredEventPage.DisplayName
+                                </h3>
+                                @if (!string.IsNullOrWhiteSpace(featuredEventPage.Fields["Content-Body"].ToString()))
+                                {
+                                    @Html.Sitecore().Field("Content-Body", featuredEventPage)
+                                }
+                                <a href="@pageLink" class="btn btn-default">
+                                    Read more
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="well bg-primary">
-                        <h5 class="text-uppercase">Events</h5>
-                        <ul class="media-list">
-                            <li class="media">
-                                <div class="media-body">
-                                    May 18, 2016
-                                    <h4 class="media-heading">
-                                        <a href="Event-Detail.html">Cycling from Bangkok to Chiang Mai</a>
-                                    </h4>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-body">
-                                    September 20, 2016
-                                    <h4 class="media-heading">
-                                        <a href="Event-Detail.html">Hiking the Italian Alps </a>
-                                    </h4>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-body">
-                                    December 15, 2016
-                                    <h4 class="media-heading">
-                                        <a href="Event-Detail.html">Skiing the Himalayas</a>
-                                    </h4>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-body">
-                                    May 24, 2017
-                                    <h4 class="media-heading">
-                                        <a href="Event-Detail.html">Rock Climbing in the Czech Republic</a>
-                                    </h4>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="Event-Sections.html" class="btn btn-default">Read more</a>
-                    </div>
-                </div>
+                }
+            }
+            <!-- [/Set Featured Event] -->
+            <!-- [Upcoming Events List] -->
+            <div class="col-md-4">
+                @Html.Action("GetUpcomingEvents", "EventsList")
             </div>
+            <!-- [/Upcoming Events List] -->
+
         </div>
-        <!-- [/Upcoming Events] -->
-    </section>
+    </div>
+
+</section>

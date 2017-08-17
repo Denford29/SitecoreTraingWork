@@ -1,4 +1,4 @@
-﻿using Sitecore.Mvc.Presentation;
+﻿using Sitecore.Data.Items;
 
 namespace SATC.SC.Framework.SitecoreHelpers
 {
@@ -21,14 +21,14 @@ namespace SATC.SC.Framework.SitecoreHelpers
          /// <summary>
          /// Create the instance of the master database to use within the class.
          /// </summary>
-        private readonly Database _masterDatabase;
+         public Database MasterDatabase;
 
         /// <summary>
         /// Assign the items to use later in the constructor, currently set the master database
         /// </summary>
         public StandardHelpers()
         {
-            _masterDatabase = RenderingContext.Current.ContextItem.Database;
+            MasterDatabase = Sitecore.Configuration.Factory.GetDatabase("master");
         }
 
         /// <summary>
@@ -42,11 +42,18 @@ namespace SATC.SC.Framework.SitecoreHelpers
         /// <param name="settingName">
         /// This is the name of the config setting you want to get the value for e.g HomePageID
         /// </param>
+        /// <param name="contextItem"></param>
         /// <returns>
         /// This will return the verified GUID from that setting name e.g. {00000000-0000-0000-0000-000000000000}
         /// </returns>
-        public virtual ID GetItemIdFromConfig(string settingName)
+        public virtual ID GetItemIdFromConfig(string settingName , Item contextItem = null)
         {
+            //if we have a context item passed in then get the database from the item
+            if (contextItem != null)
+            {
+                MasterDatabase = contextItem.Database;
+            }
+
             //set the default return ID as null
             var itemId = ID.Null;
             //check the string value sent in is not null
@@ -61,7 +68,7 @@ namespace SATC.SC.Framework.SitecoreHelpers
                     if (!ID.IsNullOrEmpty(sitecoreItemId))
                     {
                         //once our id is validated , check if the item is in the master database
-                        var idDatabaseItem = _masterDatabase.GetItem(sitecoreItemId);
+                        var idDatabaseItem = MasterDatabase.GetItem(sitecoreItemId);
                         //check if the database item is not null then set that id to the returned one
                         if(idDatabaseItem != null)
                         {
@@ -84,10 +91,17 @@ namespace SATC.SC.Framework.SitecoreHelpers
         /// </summary>
         /// <param name="settingName">
         /// </param>
+        /// <param name="contextItem"></param>
         /// <returns>
         /// </returns>
-        public virtual TemplateID GetTemplateIdFromConfig(string settingName)
+        public virtual TemplateID GetTemplateIdFromConfig(string settingName, Item contextItem = null)
         {
+            //if we have a context item passed in then get the database from the item
+            if (contextItem != null)
+            {
+                MasterDatabase = contextItem.Database;
+            }
+
             //set the default return ID as null
             var itemTemplateId = new TemplateID();
             //check the string value sent in is not null
@@ -102,7 +116,7 @@ namespace SATC.SC.Framework.SitecoreHelpers
                     if (sitecoreItemTemplateId.ID != new TemplateID())
                     {
                         //once our id is validated , check if the template is in the master database
-                        var databaseTemplateItem = _masterDatabase.GetTemplate(sitecoreItemTemplateId);
+                        var databaseTemplateItem = MasterDatabase.GetTemplate(sitecoreItemTemplateId);
                         //check if the database template is not null then return the validated template id
                         if (databaseTemplateItem != null)
                         {

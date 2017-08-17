@@ -52,21 +52,24 @@ namespace events.tac.local.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
+            //get the current context
+            var contextItem = RenderingContext.Current.ContextItem;
+
             //get the master database to use to get items from
-            var database = RenderingContext.Current.ContextItem.Database;
+            var database = contextItem.Database;
 
             //create a new model
             var model = new PageHeaderModel();
 
             //get the project settings id from the config, to use to get the logo image from
-            var projectSettingsPageId = _standardHelpers.GetItemIdFromConfig("ProjectSettingsPageID");
+            var projectSettingsPageId = _standardHelpers.GetItemIdFromConfig("ProjectSettingsPageID", contextItem);
             if (projectSettingsPageId != ID.Null)
             {
                 var projectSettingsPage = database.GetItem(projectSettingsPageId);
                 if (projectSettingsPage != null)
                 {
                     //get the project settings template id from the config
-                    var projectSettingsTemplateId = _standardHelpers.GetTemplateIdFromConfig("ProjectSettingsTemplateID");
+                    var projectSettingsTemplateId = _standardHelpers.GetTemplateIdFromConfig("ProjectSettingsTemplateID", contextItem);
                     //check if the project settings page uses that template
                     var isProjectSettingsTemplate = projectSettingsPage.TemplateID == projectSettingsTemplateId;
                     if (isProjectSettingsTemplate)
@@ -77,7 +80,7 @@ namespace events.tac.local.Controllers
             }
 
             // get the homepage id set in the config to use to get the menu items
-            var homePageId = _standardHelpers.GetItemIdFromConfig("HomePageID");
+            var homePageId = _standardHelpers.GetItemIdFromConfig("HomePageID", contextItem);
             if (homePageId != ID.Null)
             {
                 //get the home item from the config id
@@ -86,7 +89,7 @@ namespace events.tac.local.Controllers
                 if (homePage != null)
                 {
                     //check if the homepage's template is the same as the one set in our config
-                    var homeTemplateId = _standardHelpers.GetTemplateIdFromConfig("HomeTemplateID");
+                    var homeTemplateId = _standardHelpers.GetTemplateIdFromConfig("HomeTemplateID", contextItem);
                     var isHomePageTemplate = homePage.TemplateID == homeTemplateId;
                     //if the homepage template matches then we can now use it to get the navigation items
                     if (isHomePageTemplate)

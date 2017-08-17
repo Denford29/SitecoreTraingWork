@@ -1,0 +1,68 @@
+﻿@model events.tac.local.Areas.ATDW.Models.AttributesModel
+@{
+    ViewBag.Title = "ATDW  Attributes Importer";
+    Layout = "~/Areas/ATDW/Views/Shared/Layout.cshtml";
+}
+
+<h2>
+    ATDW Attributes Importer
+</h2>
+
+@if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>@Model.ErrorMessage</strong>
+    </div>
+}
+else if (!string.IsNullOrWhiteSpace(Model.SuccessMessage))
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>@Model.SuccessMessage</strong>
+    </div>
+}
+
+<p>
+    Please select the attribute type to import attributes for from the list below.
+</p>
+
+
+<hr />
+@if (Model.AttributeTypesAvailable.Count > 0)
+{
+    using (Html.BeginForm("AttributesImporter", "AtdwImporter", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            <label for="SelectedAttributeType" class="col-sm-2 control-label">Attribute Type</label>
+            <div class="col-sm-10">
+                @*@Html.DropDownListFor(model => model.SelectedAttributeType, new SelectList(Model.AttributeTypesAvailable), new {@class = "dropdown-menu"})*@
+                <select class="form-control" id="SelectedAttributeType" name="SelectedAttributeType">
+                    <option value="">
+                        Please select...
+                    </option>
+                    @foreach (var attributeType in Model.AttributeTypesAvailable)
+                    {
+                        <option value="@attributeType.Value">
+                            @attributeType.Text
+                        </option>
+                    }
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" id="importAttributesBtn">
+                    Import Attributes
+                </button>
+            </div>
+        </div>
+    }
+}
+

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - SA</title>
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/ATDW/Content/atdw-importer.css" rel="stylesheet" />
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("ATDW Importer", "Index", "AtdwImporter", new { area = "ATDW" }, new { @class = "navbar-brand" })
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        @Html.ActionLink("Attributes Types Importer", "AttributesTypesImporter", "AtdwImporter", new { area = "ATDW" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Attributes Importer", "AttributesImporter", "AtdwImporter", new {area = "ATDW"}, null)
+                    </li>
+                    <li>
+                        <a href="#">Attributes List</a>
+                    </li>
+                </ul>
+                <hr/>
+                <ul class="nav nav-sidebar">
+                    <li><a href="">Categories Importer</a></li>
+                    <li><a href="">Categories List</a></li>
+                </ul>
+                <hr />
+                <ul class="nav nav-sidebar">
+                    <li><a href="">Products Importer</a></li>
+                    <li><a href="">Products List</a></li>
+                    <li><a href="">Product Search</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - SA ATDW Importer</p>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/Scripts/jquery.2.1.4.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+

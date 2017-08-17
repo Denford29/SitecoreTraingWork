@@ -30,5 +30,11 @@ namespace events.tac.local.Models
             get;
             set;
         }
+
+        public string EditorDatasourcePath
+        {
+            get;
+            set;
+        }
     }
 }

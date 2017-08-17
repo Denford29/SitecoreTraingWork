@@ -2,24 +2,20 @@
 
 <header>
     <h1>
-        @*@Html.Sitecore().Field("ContentHeading")*@
         @Model.Heading
     </h1>
 </header>
 <!-- [Event Details] -->
 <div class="well">
     <p class="text-muted">
-        @*@Html.Sitecore().Field("Date", new { Format = "dd MMMM yyyy" })*@
         @Model.StartDate
     </p>
     <p class="text-muted">
         Duration: 
-        @*@Html.Sitecore().Field("Duration")*@
         @Model.Duration
     </p>
     <span class="text-muted">
         Difficulty: 
-        @*@Html.Sitecore().Field("Difficulty-Level")*@
         @Model.Difficult
     </span>
     <div class="difficulty-circle">
@@ -48,17 +44,14 @@
 <!-- [/Event Details] -->
 <!-- [Event Content] -->
 <div class="lead">
-     @*@Html.Sitecore().Field("Content-Body")*@
     @Model.Body
 </div>
 
 <div class="article image">
-    @*@Html.Sitecore().Field("Event-Image", new { mw = "1000", mh = "568", @class = "img-responsive" })*@
     @Model.EventImage
 </div>
 
 <div class="lead">
-    @*@Html.Sitecore().Field("ContentIntro")*@
     @Model.Intro
 </div>
 
@@ -66,8 +59,6 @@
     <h4>
     Trip Highlights
     </h4>
-    @*@Html.Sitecore().Field("Highlights")*@
-    @*@Sitecore.Globalization.Translate.Text("Highlights")*@
     @Model.Hightlights
 </div>
 <!-- [/Event Content] -->

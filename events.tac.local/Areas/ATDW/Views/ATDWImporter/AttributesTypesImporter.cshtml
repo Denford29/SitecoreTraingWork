@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Attributes Types Importer";
+    Layout = "~/Areas/ATDW/Views/Shared/Layout.cshtml";
+}
+
+<h2>
+    ATDW Attributes Types Importer
+</h2>
+
+<p>
+    This impoerter will retrieve a list of all available Attribute Types from ATDW.
+    If the types are already stored on the site these will be updated and new ones will be added.
+</p>
+
+<hr />
+
+@using (Html.BeginForm("ImportAttributesTypes", "AtdwImporter", FormMethod.Post, new {enctype = "multipart/form-data", @class= "form-horizontal" }))
+{
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary" id="importAttributesTypesBtn">
+                Import Attributes Types
+            </button>
+        </div>
+    </div>
+}
+

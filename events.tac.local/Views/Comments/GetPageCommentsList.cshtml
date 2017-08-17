@@ -1,0 +1,22 @@
+﻿@model events.tac.local.Models.EventCommentsListModel
+@if (Model.PageComments.Count > 0)
+{
+    <hr />
+    <!-- [Comments List] -->
+    <div class="comments">
+        <h4>What others have to say</h4>
+        @foreach (var comment in Model.PageComments)
+        {
+            <div>
+                <strong>@comment.CommentorName</strong> 
+                &mdash; @comment.CommentDate.ToShortDateString()
+            </div>
+            <blockquote>
+                @comment.CommentText
+            </blockquote>
+        }
+    </div>
+    <!-- [/Comments List] -->
+    <hr />
+}
+

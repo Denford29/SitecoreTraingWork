@@ -1,4 +1,6 @@
-﻿using Sitecore.DependencyInjection;
+﻿using events.tac.local.Areas.ATDW.Controllers;
+using events.tac.local.Areas.Importer.Controllers;
+using Sitecore.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using events.tac.local.Controllers;
 using SATC.SC.Framework.Navigation;
@@ -16,6 +18,14 @@ namespace events.tac.local.Business
             serviceCollection.AddTransient<PageHeaderController>();
             serviceCollection.AddTransient<BreadcrumbController>();
             serviceCollection.AddTransient<CarouselController>();
+            serviceCollection.AddTransient<PageFooterController>();
+            serviceCollection.AddTransient<EventsListController>();
+            serviceCollection.AddTransient<CommentsController>();
+            //events importer controller
+            serviceCollection.AddTransient<EventsController>();
+            //ATDW Controllers
+            serviceCollection.AddTransient<AtdwImporterController>();
+
 
             // add a service to get the rendering context
             serviceCollection.AddTransient((r) => RenderingContext.Current);

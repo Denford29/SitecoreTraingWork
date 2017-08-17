@@ -55,7 +55,7 @@ namespace events.tac.local.Controllers
             var database = currentItem.Database;
 
             // get the homepage id set in the config to use to get the breadcrumb items with
-            var homePageId = _standardHelper.GetItemIdFromConfig("HomePageID");
+            var homePageId = _standardHelper.GetItemIdFromConfig("HomePageID", currentItem);
             if (homePageId != ID.Null)
             {
                 //get the home item from the config id

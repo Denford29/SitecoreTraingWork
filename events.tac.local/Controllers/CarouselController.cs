@@ -7,6 +7,7 @@ using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Resources.Media;
+using Sitecore.Mvc.Presentation;
 
 namespace events.tac.local.Controllers
 {
@@ -40,15 +41,18 @@ namespace events.tac.local.Controllers
             //create the  default model
             var model = new SiteCarouselModel();
 
+            //get the current context
+            var contextItem = RenderingContext.Current.ContextItem;
+
             //get the site settings id from the config, to use to get the carousel items
-            var siteSettingsPageId = _standardHelpers.GetItemIdFromConfig("SiteSettingsPageID");
+            var siteSettingsPageId = _standardHelpers.GetItemIdFromConfig("SiteSettingsPageID", contextItem);
             if (siteSettingsPageId != ID.Null)
             {
                 var siteSettingsPage = database.GetItem(siteSettingsPageId);
                 if (siteSettingsPage != null)
                 {
                     //get the site settings template id from the config
-                    var siteSettingsTemplateId = _standardHelpers.GetTemplateIdFromConfig("SiteSettingsTemplateID");
+                    var siteSettingsTemplateId = _standardHelpers.GetTemplateIdFromConfig("SiteSettingsTemplateID", contextItem);
                     //check if the site settings page uses that template
                     var isSiteSettingsTemplate = siteSettingsPage.TemplateID == siteSettingsTemplateId;
                     if (isSiteSettingsTemplate)

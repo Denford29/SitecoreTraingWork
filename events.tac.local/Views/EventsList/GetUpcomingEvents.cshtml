@@ -1,0 +1,31 @@
+﻿@model events.tac.local.Models.UpcomingEventsListModel
+    
+@if (Model.Events.Count > 0)
+{
+    @*<div class="col-md-4">*@
+        <div class="well bg-primary">
+            <h5 class="text-uppercase">
+                Upcoming Events
+            </h5>
+            <ul class="media-list">
+                @foreach (var eventDetailItem in Model.Events)
+                {
+                    <li class="media">
+                        <div class="media-body">
+                            @eventDetailItem.Date.ToShortDateString()
+                            <h4 class="media-heading">
+                                <a href="@eventDetailItem.ItemUrl">
+                                    @eventDetailItem.ContentHeading
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+                }
+
+            </ul>
+            <a href="@Model.EventsLandingUrl" class="btn btn-default">
+                Read more
+            </a>
+        </div>
+    @*</div>*@
+}
