@@ -1,0 +1,69 @@
+﻿@using Sitecore.Mvc.Extensions
+@model events.tac.local.Models.PageFooterModel
+
+@using (Html.EditFrame(Model.EditorDatasourcePath, "Footer Details","Edit Footer Details", null, null, null))
+{
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- [About Us] -->
+                    <div class="well">
+                        @if (!string.IsNullOrWhiteSpace(Model.FooterHeading.ToHtmlString()))
+                        {
+                            <h4>
+                                @Model.FooterHeading
+                            </h4>
+                        }
+
+                        @if (!string.IsNullOrWhiteSpace(Model.FooterIntro.ToHtmlString()))
+                        {
+                            <p>
+                                @Model.FooterIntro
+                            </p>
+                        }
+
+                    </div>
+                    <!-- [/About Us] -->
+                </div>
+
+                @if (Model.FooterLinks.Count > 0)
+                {
+                    <div class="col-md-4">
+                        <!-- [Meta Navigation] -->
+                        <ul class="nav nav-stacked">
+                            @foreach (var footerLink in Model.FooterLinks)
+                            {
+                                <li>
+                                    <a href="@footerLink.Url" title="@footerLink.Title">
+                                        @footerLink.Title
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                        <!-- [/Meta Navigation] -->
+                    </div>
+                }
+
+            </div>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(Model.CopyrightText.ToHtmlString()))
+        {
+            <div class="footer-bottom text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- [Copyright] -->
+                            <small >
+                                <span>@Model.CopyrightText</span>
+                            </small>
+                            <!-- [/Copyright] -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </footer>
+}

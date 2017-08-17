@@ -5,21 +5,16 @@ using System.Web;
 
 namespace events.tac.local.Models
 {
-    public class NavigationItem
+    public class UpcomingEventsListModel
     {
-        public string Title
+        public List<EventDetails> Events
         {
             get;
             set;
         }
+        = new List<EventDetails>();
 
-        public string Url
-        {
-            get;
-            set;
-        }
-
-        public bool Active
+        public string EventsLandingUrl
         {
             get;
             set;

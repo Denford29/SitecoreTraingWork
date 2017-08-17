@@ -1,54 +1,60 @@
-﻿using events.tac.local.Business.Navigation;
-using events.tac.local.Models;
-using Sitecore.Data.Items;
-using Sitecore.Links;
+﻿using Sitecore.Data.Items;
 using Sitecore.Mvc.Presentation;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using TAC.Utils.SitecoreModels;
+using SATC.SC.Framework.Navigation;
 
 namespace events.tac.local.Controllers
 {
     public class NavigationController : Controller
     {
 
-        // Fields
-        private readonly NavigationModelBuilder _navigationModelBuilder;
+
+        /// <summary>
+        /// initiate the field for the navigation helpers from the SATC SC Framework
+        /// </summary>
+        private readonly NavigationHelpers _navigationHelpers;
+
+        /// <summary>
+        /// initiate the field to use for the rendering context
+        /// </summary>
         private readonly RenderingContext _renderingContext;
 
-        //Constructor
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="navigationHelpers"></param>
+        /// <param name="renderingContext"></param>
         public NavigationController
             (
-            NavigationModelBuilder navigationModelBuilder,
+            NavigationHelpers navigationHelpers,
             RenderingContext renderingContext
             )
         {
-            _navigationModelBuilder = navigationModelBuilder;
+            _navigationHelpers = navigationHelpers;
             _renderingContext = renderingContext;
         }
 
-        // GET: Navigation
+        /// <summary>
+        /// get the initial display for the index with any defaults set
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
-            //Item currentItem = RenderingContext.Current.ContextItem;
             Item currentItem = _renderingContext.ContextItem;
 
-            Item Section = currentItem.Axes.GetAncestors().FirstOrDefault(item => item.TemplateName == "Events-Section");
+            Item section = currentItem.Axes.GetAncestors().FirstOrDefault(item => item.TemplateName == "Events-Section");
 
             if (!string.IsNullOrWhiteSpace(RenderingContext.Current.Rendering.DataSource))
             {
                 var datasourceItem = RenderingContext.Current.ContextItem.Database.GetItem(RenderingContext.Current.Rendering.DataSource);
-                if(datasourceItem != null)
+                if (datasourceItem != null)
                 {
-                    Section = datasourceItem;
+                    section = datasourceItem;
                 }
             }
 
-            //var model = _navigationModelBuilder.CreateNavigationMenu(Section, currentItem);
-            var model = _navigationModelBuilder.CreateNavigationMenu(new SitecoreItem(Section), new SitecoreItem(currentItem));
+            var model = _navigationHelpers.CreateNavigationMenu(section, currentItem);
             return View(model);
         }
 

@@ -2,8 +2,6 @@
 using Sitecore.Links;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -28,7 +26,7 @@ namespace events.tac.local.Controllers
                 {
                     Url = LinkManager.GetItemUrl(item),
                     Title = new HtmlString(FieldRenderer.Render(item, "ContentHeading")),
-                    Image = new HtmlString(FieldRenderer.Render(item, "DecorationBanner", "mw=500&mh=300"))
+                    Image = new HtmlString(FieldRenderer.Render(item, "DecorationBanner", "w=450&h=300"))
                 }
                 ));
 

@@ -5,14 +5,20 @@
 
 }
 
-<hr />
-<!-- [Comments List] -->
-<div class="comments">
-    <h4>What others have to say</h4>
-    <div><strong>John</strong> &mdash; 05 Feb 2016</div>
-    <blockquote>Fantastic hike, I did it in 2014, I can't wait to do it again!</blockquote>
-    <div><strong>Kerry</strong> &mdash; 06 Feb 2016</div>
-    <blockquote>It is too long, and not really worth it.</blockquote>
+<header>
+    <h1>
+        @Html.Sitecore().Field("ContentHeading")
+    </h1>
+</header>
+
+<div class="lead">
+    @Html.Sitecore().Field("ContentIntro")
 </div>
-<!-- [/Comments List] -->
-<hr />
+
+<div class="article image">
+    @Html.Sitecore().Field("Page-Image", new { mw = "1000", mh = "568", @class = "img-responsive" })
+</div>
+
+<div class="lead">
+    @Html.Sitecore().Field("Content-Body")
+</div>

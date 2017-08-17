@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SATC.SC.Framework.Navigation.Models;
 
 namespace events.tac.local.Controllers
 {
@@ -36,7 +37,7 @@ namespace events.tac.local.Controllers
                 return new EmptyResult();
             }
 
-            var displayEvents = setEvents.Select(eventItem => new NavigationItem()
+            var displayEvents = setEvents.Select(eventItem => new NavigationItemModel()
             {
                 Title = eventItem.DisplayName,
                 Url = LinkManager.GetItemUrl(eventItem)

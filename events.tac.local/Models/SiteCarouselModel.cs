@@ -5,12 +5,13 @@ using System.Web;
 
 namespace events.tac.local.Models
 {
-    public class NavigationMenu : NavigationItem
+    public class SiteCarouselModel
     {
-        public IEnumerable<NavigationMenu> Children
+        public List<CarouselImageModel> CarouselItems
         {
             get;
             set;
         }
+        = new List<CarouselImageModel>();
     }
 }

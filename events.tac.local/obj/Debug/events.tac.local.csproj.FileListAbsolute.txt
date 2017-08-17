@@ -199,3 +199,4 @@ C:\Sitecore\SitecoreTraingWork\events.tac.local\obj\Debug\events.tac.local.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\obj\Debug\events.tac.local.pdb
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\SATC.SC.Framework.dll
 C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\SATC.SC.Framework.pdb
+C:\Sitecore\SitecoreTraingWork\events.tac.local\bin\SATC.SC.Framework.xml

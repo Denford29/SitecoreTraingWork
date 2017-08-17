@@ -75,8 +75,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Navigation\Models\NavigationItemModel.cs" />
+    <Compile Include="Navigation\Models\NavigationMenuModel.cs" />
+    <Compile Include="Navigation\Models\SiteMenuModel.cs" />
+    <Compile Include="Navigation\NavigationHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SitecoreHelpers\StandardHelper.cs" />
+    <Compile Include="SitecoreHelpers\LanguageHelpers.cs" />
+    <Compile Include="SitecoreHelpers\Models\LanguageModel.cs" />
+    <Compile Include="SitecoreHelpers\StandardHelpers.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

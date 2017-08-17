@@ -1,6 +1,5 @@
 ﻿<Project>
   <FolderSync SynchronizeProjectOutputFolderOnBuild="False">
     <Folder SourceFolder="App_Config\Include\Project\TAC\" DestinationFolder="App_Config\Include\Project\TAC\" Mode="Copy" Pattern="*.*" />
-    <Folder SourceFolder="Areas\" DestinationFolder="Areas\" Mode="Mirror" Pattern="*.*" />
   </FolderSync>
 </Project>

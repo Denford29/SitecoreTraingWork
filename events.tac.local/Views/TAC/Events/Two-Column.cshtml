@@ -1,29 +1,28 @@
-﻿@using Sitecore.Mvc
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
-@using Sitecore.Web.UI.WebControls
-@using Sitecore.Data.Items;
+@using Sitecore.Resources.Media
 @model RenderingModel
 @{
     var backgroundImage = "/Images/climbing-events.jpg";
     var currentItem = RenderingContext.Current.ContextItem;
-    //var Image = FieldRenderer.Render(currentItem, "DecorationBanner", "mw=1280&mh=853");
-    MediaItem mediaItem = currentItem.Fields["DecorationBanner"].Item;
-    var imageSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem);
-    if(imageSrc != null)
+    ImageField bannerImageField = currentItem.Fields["DecorationBanner"];
+    if (bannerImageField != null && bannerImageField.MediaItem != null)
     {
-        backgroundImage = imageSrc;
+        var options = new MediaUrlOptions { Height =850 , Width = 565 };
+        backgroundImage = MediaManager.GetMediaUrl(bannerImageField.MediaItem, options);
     }
 }
 
 <main>
-    <header class="page-header bg-media bg-parallax" style="background-image: url('/Images/climbing-events.jpg')">
+    <header class="page-header bg-media bg-parallax" style="background-image: url(@backgroundImage)">
         <div class="container">
             <!-- [Breadcrumb Navigation] -->
             @Html.Sitecore().Placeholder("pageHeader")
             <!-- [/Breadcrumb Navigation] -->
-
         </div>
     </header>
+
     <section class="page-header">
         <div class="container">
             <!-- [Two Columns] -->

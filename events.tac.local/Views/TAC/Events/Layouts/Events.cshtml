@@ -3,10 +3,10 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-  Layout = null;
+    Layout = null;
 }
 <!DOCTYPE html>
-<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if IE 9]><html lang="en"><![endif]-->
 <!--[if !IE]><!-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!--<![endif]-->
@@ -34,64 +34,21 @@
 <body class="header-static ">
     <div id="main-container">
         <!-- [Page Header] -->
-        @Html.Sitecore().Rendering("/sitecore/layout/Renderings/TAC/Events/Page Header")
+        @Html.Sitecore().Rendering("/sitecore/layout/Renderings/TAC/Events/PageHeader")
         <!-- [/Page Header] -->
-
         <!-- [Page Content] -->
         @Html.Sitecore().Placeholder("main")
         <!-- [/Page Content] -->
-
         <!-- [Footer Content] -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <!-- [About Us] -->
-                        <div class="well">
-                            <h4>About Us</h4>
-                            <p>
-                                The Adventure Company is a nonprofit organization. In each location where we sponsor events, we carefully vet local conservation
-                                organizations so that our members have the opportunity to donate their money where it will do the most good on a
-                                local level.
-                            </p>
-                        </div>
-                        <!-- [/About Us] -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- [Meta Navigation] -->
-                        <ul class="nav nav-stacked">
-                            <li>
-                                <a href="Content-page.html" title="Legal Notice">Legal Notice</a>
-                            </li>
-                            <li>
-                                <a href="Content-page.html" title="Privacy Policy">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="Content-page.html" title="Terms and Conditions">Terms and Conditions</a>
-                            </li>
-                        </ul>
-                        <!-- [/Meta Navigation] -->
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- [Copyright] -->
-                            <small class="copyright">
-                                <span>Copyright &copy; 2016 Version 1.0.0.0</span>
-                            </small>
-                            <!-- [/Copyright] -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @Html.Sitecore().Rendering("/sitecore/layout/Renderings/TAC/Events/PageFooter")
         <!-- [/Footer Content] -->
     </div>
-    <script src="/Scripts/Sitecore.Foundation.Theming.min.js"></script>
-    <script src="/Scripts/Navigation.js"></script>
+
+    <!-- jQuery -->
+    <script src="/Scripts/jquery.2.1.4.js"></script>
+    <!-- Include all other scripts -->
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/SiteScripts.js"></script>
 </body>
 
 </html>
