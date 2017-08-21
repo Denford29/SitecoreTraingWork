@@ -221,6 +221,11 @@ namespace events.tac.local.Areas.ATDW.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// Prepare the default required properties for an attribute model
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public AttributesModel PrepareAttributesModel(AttributesModel model)
         {
             //get the database to use
@@ -258,6 +263,10 @@ namespace events.tac.local.Areas.ATDW.Controllers
             return model;
         }
 
+        /// <summary>
+        /// get the initial display for the attributes types importer
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult AttributesTypesImporter()
         {
@@ -265,7 +274,7 @@ namespace events.tac.local.Areas.ATDW.Controllers
         }
 
         /// <summary>
-        /// import the attributes types from a specific attribute type
+        /// import the available attributes types from ATDW
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -359,6 +368,122 @@ namespace events.tac.local.Areas.ATDW.Controllers
             }
 
             return View("AttributesTypesImporter");
+        }
+
+        /// <summary>
+        /// get the default view of the categories importer
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult CategoriesImporter()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// mport the available categories types from ATDW
+        /// </summary>
+        /// <returns></returns>
+        public async Task<ViewResult> ImportCategories()
+        {
+            //create the http client to request the json with
+            var httpClient = new HttpClient();
+
+            //create the initial response categories list
+            var responseCategoiresList = new List<ProductCategoriesModel>();
+
+            // create the api response
+            var response =
+                await httpClient.GetAsync("http://atlas.atdw-online.com.au/api/atlas/categories?key=996325374125&out=json");
+
+            //check if we get a successs status back
+            if (response.IsSuccessStatusCode)
+            {
+                //try and read the contents and convert them into a json object
+                try
+                {
+                    var responseStream = response.Content.ReadAsStringAsync();
+                    //assign the json response to our attributes model
+                    responseCategoiresList = JsonConvert.DeserializeObject<List<ProductCategoriesModel>>(responseStream.Result);
+                }
+                catch (Exception)
+                {
+                    //catch the error
+                    return View("CategoriesImporter");
+                }
+            }
+            else
+            {
+                //get the response status code
+                //var errorStatusCode = response.StatusCode;
+                //var responseError = errorStatusCode.ToString();
+            }
+
+            //now get the categories list from the model
+            if (responseCategoiresList.Any())
+            {
+                //get the categories item templates to use late
+                var projectSettingsItemId = _standardHelper.GetItemIdFromConfig("ProjectSettingsItemID");
+                var atdwCategoriesParentTemplateId = _standardHelper.GetTemplateIdFromConfig("ATDWCategoriesParentTemplateID");
+                var atdwCategoryTemplateId = _standardHelper.GetTemplateIdFromConfig("ATDWCategoryTemplateID");
+
+                //check if the template are valid
+                if (atdwCategoryTemplateId.ID != ID.Null)
+                {
+                    var database = Sitecore.Configuration.Factory.GetDatabase("master");
+                    //get the project settings item to use  to find the categories parent to insert the types
+                    var projectSettingsItem = database.GetItem(projectSettingsItemId);
+                    if (projectSettingsItem != null)
+                    {
+                        //get the categories arent to use to import categories under
+                        var categoriesParentContainer = projectSettingsItem.GetChildren()
+                                                                          .FirstOrDefault(settingChild => settingChild.TemplateID == atdwCategoriesParentTemplateId);
+
+                        //check if we have the categories parent container
+                        if (categoriesParentContainer != null)
+                        {
+                            var categoryTemplateId = new TemplateID(atdwCategoryTemplateId);
+                            // use the security disabler to create or update items
+                            using (new SecurityDisabler())
+                            {
+                                //go through the categories to add
+                                foreach (var productCategory in responseCategoiresList)
+                                {
+                                    var categoryCode = productCategory.CategoryId;
+                                    var hasCategory = categoriesParentContainer.Children
+                                                                .Any(typeItem => typeItem.Fields["Category-Id"].Value == categoryCode);
+
+                                    if (!hasCategory)
+                                    {
+                                        var name = ItemUtil.ProposeValidItemName(productCategory.Description);
+                                        Item categoryItem = categoriesParentContainer.Add(name, categoryTemplateId);
+                                        try
+                                        {
+                                            //initiate the editing
+                                            categoryItem.Editing.BeginEdit();
+                                            // fill in the category properties
+                                            categoryItem["Category-Id"] = productCategory.CategoryId;
+                                            categoryItem["Category-Description"] = productCategory.Description;
+                                            categoryItem["Category-ATDW-Id"] = productCategory.CategoryId;
+                                            //terminate the editing
+                                            categoryItem.Editing.EndEdit();
+
+                                        }
+                                        catch (Exception)
+                                        {
+                                            categoryItem.Editing.CancelEdit();
+                                            //catch the error and return it in the model
+                                            return View("CategoriesImporter");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            return View("CategoriesImporter");
         }
     }
 }

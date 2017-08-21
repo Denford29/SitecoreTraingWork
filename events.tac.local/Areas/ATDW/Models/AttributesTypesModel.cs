@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace events.tac.local.Areas.ATDW.Models
+﻿namespace events.tac.local.Areas.ATDW.Models
 {
     public class AttributesTypesModel
     {

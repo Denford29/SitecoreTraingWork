@@ -57,21 +57,23 @@
                     <li>
                         @Html.ActionLink("Attributes Importer", "AttributesImporter", "AtdwImporter", new {area = "ATDW"}, null)
                     </li>
-                    <li>
+                    @*<li>
                         <a href="#">Attributes List</a>
-                    </li>
+                    </li>*@
                 </ul>
                 <hr/>
                 <ul class="nav nav-sidebar">
-                    <li><a href="">Categories Importer</a></li>
-                    <li><a href="">Categories List</a></li>
+                    <li>
+                        @Html.ActionLink("Categories Importer", "CategoriesImporter", "AtdwImporter", new { area = "ATDW" }, null)
+                    </li>
+                    @*<li><a href="">Categories List</a></li>*@
                 </ul>
                 <hr />
-                <ul class="nav nav-sidebar">
+                @*<ul class="nav nav-sidebar">
                     <li><a href="">Products Importer</a></li>
                     <li><a href="">Products List</a></li>
                     <li><a href="">Product Search</a></li>
-                </ul>
+                </ul>*@
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 @RenderBody()

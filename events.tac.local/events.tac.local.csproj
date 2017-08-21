@@ -228,6 +228,7 @@
     <Content Include="Areas\ATDW\Views\ATDWImporter\Index.cshtml" />
     <Content Include="Areas\ATDW\Views\ATDWImporter\AttributesImporter.cshtml" />
     <Content Include="Areas\ATDW\Views\ATDWImporter\AttributesTypesImporter.cshtml" />
+    <Content Include="Areas\ATDW\Views\ATDWImporter\CategoriesImporter.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -354,6 +355,7 @@
     <Compile Include="Areas\ATDW\Models\AttributesJsonModel.cs" />
     <Compile Include="Areas\ATDW\Models\AttributesModel.cs" />
     <Compile Include="Areas\ATDW\Models\AttributesTypesModel.cs" />
+    <Compile Include="Areas\ATDW\Models\ProductCategoriesModel.cs" />
     <Compile Include="Areas\Importer\Controllers\EventsController.cs" />
     <Compile Include="Areas\Importer\ImporterAreaRegistration.cs" />
     <Compile Include="Areas\Importer\Models\Event.cs" />

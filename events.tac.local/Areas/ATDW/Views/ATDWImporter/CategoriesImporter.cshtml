@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Product Categories Importer";
+    Layout = "~/Areas/ATDW/Views/Shared/Layout.cshtml";
+}
+
+<h2>
+    ATDW Product Categories Importerr
+</h2>
+
+<p>
+    This importer will retrieve a list of all available Product Categories from ATDW.
+    If the types are already stored on the site these will be updated and new ones will be added.
+</p>
+
+<hr />
+
+@using (Html.BeginForm("ImportCategories", "AtdwImporter", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+{
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary" id="ImportCategoriesBtn">
+                Import Categories
+            </button>
+        </div>
+    </div>
+}
+
