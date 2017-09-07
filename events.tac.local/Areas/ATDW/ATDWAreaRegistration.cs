@@ -2,16 +2,23 @@
 
 namespace events.tac.local.Areas.ATDW
 {
-    public class ATDWAreaRegistration : AreaRegistration 
+    /// <inheritdoc />
+    /// <summary>
+    /// register the atdw area to the site areas
+    /// </summary>
+    public class AtdwAreaRegistration : AreaRegistration 
     {
-        public override string AreaName 
-        {
-            get 
-            {
-                return "ATDW";
-            }
-        }
+        /// <inheritdoc />
+        /// <summary>
+        /// define the area name
+        /// </summary>
+        public override string AreaName => "ATDW";
 
+        /// <inheritdoc />
+        /// <summary>
+        /// register the default route for the area
+        /// </summary>
+        /// <param name="context"></param>
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(

@@ -1,0 +1,67 @@
+﻿@model events.tac.local.Areas.ATDW.Models.AutoPublishModel
+@{
+    ViewBag.Title = "Auto Publish Products";
+    Layout = "~/Areas/ATDW/Views/Shared/Layout.cshtml";
+
+    //get the host to send to the publish logic
+    var host = "";
+    var requestUrl = Context.Request.Url;
+    if (requestUrl != null)
+    {
+         host = requestUrl.Host;
+    }
+    //save the host
+    Model.DomainUrl = host;
+    //get the auto publish tirgger flag
+    var runPublish = Model.InitiatePublish;
+}
+
+<h2>
+    Auto Publish ATDW Products
+</h2>
+
+<hr/>
+
+@if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>@Model.ErrorMessage</strong>
+    </div>
+}
+else if (!string.IsNullOrWhiteSpace(Model.SuccessMessage))
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>@Model.SuccessMessage</strong>
+    </div>
+}
+
+<div class="jumbotron">
+    <div class="container text-center">
+        
+        <div class="loading" id="loadingArea" style="display: none;">
+            Loading&#8230;
+        </div>
+
+        <img src="~/Areas/ATDW/Content/Images/ATDW.jpg" alt="ATDW Logo" class="img-responsive publish-Image"/>
+    </div>
+</div>
+
+@using (Html.BeginForm("AutoPublishProducts", "AtdwImporter", FormMethod.Post,  new { id="autoPublsihForm" }))
+{
+    @Html.Hidden("publishForm", "submit" )
+    <input type="hidden" name="DomainUrl" id="DomainUrl" value="@Model.DomainUrl">
+    <input type="hidden" name="InitiatePublish" id="InitiatePublish" value="@Model.InitiatePublish">
+}
+
+@section footerScripts{
+    @if (runPublish)
+    {
+        <script src="~/Areas/ATDW/Content/Scripts/publish.js"></script>
+    }
+}

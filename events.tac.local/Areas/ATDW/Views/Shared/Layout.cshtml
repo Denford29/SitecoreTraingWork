@@ -52,28 +52,29 @@
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
                     <li>
+                        @Html.ActionLink("Publish ATDW Products", "AutoPublishProducts", "AtdwImporter", new { area = "ATDW" }, null)
+                    </li>
+                </ul>
+                <hr />
+                <ul class="nav nav-sidebar">
+                    <li>
                         @Html.ActionLink("Attributes Types Importer", "AttributesTypesImporter", "AtdwImporter", new { area = "ATDW" }, null)
                     </li>
                     <li>
-                        @Html.ActionLink("Attributes Importer", "AttributesImporter", "AtdwImporter", new {area = "ATDW"}, null)
+                        @Html.ActionLink("Attributes Importer", "AttributesImporter", "AtdwImporter", new { area = "ATDW" }, null)
                     </li>
-                    @*<li>
-                        <a href="#">Attributes List</a>
-                    </li>*@
                 </ul>
-                <hr/>
+                <hr />
                 <ul class="nav nav-sidebar">
                     <li>
                         @Html.ActionLink("Categories Importer", "CategoriesImporter", "AtdwImporter", new { area = "ATDW" }, null)
                     </li>
-                    @*<li><a href="">Categories List</a></li>*@
+                    <li>
+                        @Html.ActionLink("Category Classifications Importer", "CategoryClassificationsImporter", "AtdwImporter", new { area = "ATDW" }, null)
+                    </li>
                 </ul>
                 <hr />
-                @*<ul class="nav nav-sidebar">
-                    <li><a href="">Products Importer</a></li>
-                    <li><a href="">Products List</a></li>
-                    <li><a href="">Product Search</a></li>
-                </ul>*@
+
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 @RenderBody()
@@ -88,8 +89,8 @@
 
     <script src="~/Scripts/jquery.2.1.4.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("footerScripts", false)
+
 </body>
 </html>
-
-
-

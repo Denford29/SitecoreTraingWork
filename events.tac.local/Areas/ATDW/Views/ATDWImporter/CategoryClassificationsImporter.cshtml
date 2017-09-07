@@ -1,11 +1,12 @@
-﻿@model events.tac.local.Areas.ATDW.Models.AttributesModel
+﻿@model events.tac.local.Areas.ATDW.Models.CategoryClassificationsModel
+
 @{
-    ViewBag.Title = "ATDW  Attributes Importer";
+    ViewBag.Title = "Category Classifications Importer";
     Layout = "~/Areas/ATDW/Views/Shared/Layout.cshtml";
 }
 
 <h2>
-    ATDW Attributes Importer
+    ATDW Category Classifications Importer
 </h2>
 
 @if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
@@ -28,26 +29,25 @@ else if (!string.IsNullOrWhiteSpace(Model.SuccessMessage))
 }
 
 <p>
-    Please select the attribute type to import attributes for from the list below.
+    Please select the category to import classifications for from the list below.
 </p>
 
-
 <hr />
-@if (Model.AttributeTypesAvailable.Count > 0)
+@if (Model.CategoriesAvailable.Count > 0)
 {
-    using (Html.BeginForm("AttributesImporter", "AtdwImporter", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+    using (Html.BeginForm("CategoryClassificationsImporter", "AtdwImporter", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
     {
         <div class="form-group">
-            <label for="SelectedAttributeType" class="col-sm-2 control-label">Attribute Type</label>
+            <label for="SelectedCategory" class="col-sm-2 control-label">Category</label>
             <div class="col-sm-10">
-                <select class="form-control" id="SelectedAttributeType" name="SelectedAttributeType">
+                <select class="form-control" id="SelectedCategory" name="SelectedCategory">
                     <option value="">
                         Please select...
                     </option>
-                    @foreach (var attributeType in Model.AttributeTypesAvailable)
+                    @foreach (var categoryItem in Model.CategoriesAvailable)
                     {
-                        <option value="@attributeType.Value">
-                            @attributeType.Text
+                        <option value="@categoryItem.Value">
+                            @categoryItem.Text
                         </option>
                     }
                 </select>
@@ -57,8 +57,8 @@ else if (!string.IsNullOrWhiteSpace(Model.SuccessMessage))
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary" id="importAttributesBtn">
-                    Import Attributes
+                <button type="submit" class="btn btn-primary" id="importClassificationsBtn">
+                    Import Classifications
                 </button>
             </div>
         </div>

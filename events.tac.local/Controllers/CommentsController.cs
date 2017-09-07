@@ -4,6 +4,7 @@ using events.tac.local.Models;
 using SATC.SC.Framework.SitecoreHelpers;
 using Sitecore.Data;
 using Sitecore.Mvc.Presentation;
+using TAC.Utils.Helpers;
 
 namespace events.tac.local.Controllers
 {
@@ -111,12 +112,17 @@ namespace events.tac.local.Controllers
             return View(model);
         }
 
-        // recieve the posted form
-        //[HttpPost]
-        //[ValidateFormHandler]
-        //public ActionResult Index(string email)
-        //{
-        //    return View("Confirmation");
-        //}
+        /// <summary>
+        /// recieve the posted form
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateFormHandler]
+        public ActionResult Index(string email)
+        {
+            //var sitecoreItemService = Sitecore.
+            return View("Confirmation");
+        }
     }
 }

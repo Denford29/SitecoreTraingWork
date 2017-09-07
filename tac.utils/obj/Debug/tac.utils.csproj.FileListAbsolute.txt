@@ -88,5 +88,5 @@ C:\Sitecore\SitecoreTraingWork\tac.utils\bin\Debug\System.Web.WebPages.Deploymen
 C:\Sitecore\SitecoreTraingWork\tac.utils\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Sitecore\SitecoreTraingWork\tac.utils\obj\Debug\TAC.Utils.dll
 C:\Sitecore\SitecoreTraingWork\tac.utils\obj\Debug\TAC.Utils.pdb
-C:\Sitecore\SitecoreTraingWork\tac.utils\obj\Debug\tac.utils.csprojResolveAssemblyReference.cache
 C:\Sitecore\SitecoreTraingWork\tac.utils\obj\Debug\tac.utils.csproj.CoreCompileInputs.cache
+C:\Sitecore\SitecoreTraingWork\tac.utils\obj\Debug\tac.utils.csprojResolveAssemblyReference.cache

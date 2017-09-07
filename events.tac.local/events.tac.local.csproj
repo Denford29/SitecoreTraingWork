@@ -164,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\ATDW\Content\atdw-importer.css" />
+    <Content Include="Areas\ATDW\Content\Images\ATDW.jpg" />
+    <Content Include="Areas\ATDW\Content\Images\atdwsymbol-rgb-_crop-Custom.jpg" />
+    <Content Include="Areas\ATDW\Content\Scripts\publish.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -210,16 +213,29 @@
     <Content Include="Areas\Importer\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Importer\Views\Shared\Layout.cshtml" />
     <Content Include="Areas\Importer\Views\Events\Index.cshtml" />
-    <Content Include="App_Config\Include\Project\TAC\Events.DefaultIndexConfiguration.config" />
-    <Content Include="App_Config\Include\Project\TAC\Events.Services.Client.config" />
+    <Content Include="App_Config\Include\Project\TAC\Events.DefaultIndexConfiguration.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Project\TAC\Events.Services.Client.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Project\TAC\Events.DependencyInjection.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Project\TAC\Events.Serialization.config" />
+    <Content Include="App_Config\Include\Project\TAC\ATDW.DefaultIndexConfiguration.config" />
     <None Include="App_Config\Include\Project\TAC\Events.KeyItemIDs.config">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="App_Config\Include\Project\TAC\EventsSiteDefinition.config" />
+    <Content Include="App_Config\Include\Project\TAC\EventsSiteDefinition.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Project\TAC\Lucene.ATDW.Master.Index.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Project\TAC\Lucene.ATDW.Web.Index.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Project\TAC\Lucene.Events.Master.Index.config" />
     <None Include="App_Config\Include\Project\TAC\Lucene.Events.Web.Index.config" />
     <Content Include="Areas\ATDW\Views\web.config" />
@@ -229,6 +245,8 @@
     <Content Include="Areas\ATDW\Views\ATDWImporter\AttributesImporter.cshtml" />
     <Content Include="Areas\ATDW\Views\ATDWImporter\AttributesTypesImporter.cshtml" />
     <Content Include="Areas\ATDW\Views\ATDWImporter\CategoriesImporter.cshtml" />
+    <Content Include="Areas\ATDW\Views\ATDWImporter\AutoPublishProducts.cshtml" />
+    <Content Include="Areas\ATDW\Views\ATDWImporter\CategoryClassificationsImporter.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -355,6 +373,9 @@
     <Compile Include="Areas\ATDW\Models\AttributesJsonModel.cs" />
     <Compile Include="Areas\ATDW\Models\AttributesModel.cs" />
     <Compile Include="Areas\ATDW\Models\AttributesTypesModel.cs" />
+    <Compile Include="Areas\ATDW\Models\AutoPublishModel.cs" />
+    <Compile Include="Areas\ATDW\Models\CategoryClassificationsJsonModel.cs" />
+    <Compile Include="Areas\ATDW\Models\CategoryClassificationsModel.cs" />
     <Compile Include="Areas\ATDW\Models\ProductCategoriesModel.cs" />
     <Compile Include="Areas\Importer\Controllers\EventsController.cs" />
     <Compile Include="Areas\Importer\ImporterAreaRegistration.cs" />
